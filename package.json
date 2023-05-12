@@ -1,5 +1,6 @@
 {
   "name": "yclone",
+  "homepage": "https://mas364.github.io/y-clone/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
