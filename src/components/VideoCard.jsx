@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import { useState, useEffect } from 'react';
 import { Typography, Card, CardContent, CardMedia } from '@mui/material';
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 
@@ -32,7 +31,7 @@ fontWeight="bold" color="#FFF">
 <Link to={snippet?.channelId ? `/channel/${snippet?.channelId}` : demoChannelUrl}>
 <Typography variant="subtitle2"
 fontWeight="bold" color="gray">
-    {snippet?.demoChannelTitle || demoChannelTitle}
+    {snippet?.channelTitle || demoChannelTitle}
     <CheckCircleIcon sx={{ fontSize: 12, color: 'gray', ml: '5px'}} />
 </Typography>
 </Link>

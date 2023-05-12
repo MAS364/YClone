@@ -4,8 +4,8 @@ import ReactPlayer from 'react-player';
 import { Typography, Box, Stack } from '@mui/material';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 
-import { Videos } from './';
-import { fetchFromAPI } from "../utils/fetchFromAPI";
+import { Videos } from "./";
+import { fetchFromAPI } from  "../utils/fetchFromAPI";
 
 const VideoDetail = () => {
  const [videoDetail, setvideoDetail] = useState(null);  
@@ -14,10 +14,10 @@ const { id } = useParams();
 
 useEffect(() => {
     fetchFromAPI('videos?part=snippet,statistics&id=${id}')
-      .then((data) => setvideoDetail(data.items[0]));
+      .then((data) => setvideoDetail(data.items[0]))
 
       fetchFromAPI(`search?part=snippet&relatedToVideoId=${id}&type=video`)
-        .then((data) => setVideos(data.items));
+        .then((data) => setVideos(data.items))
 }, [id]);
 
 
@@ -29,13 +29,13 @@ const { snippet : { title, channelId, channelTitle }, statistics: { viewCount, l
 
   return (
     <Box minHeight="95vh">
-       <Stack>
+       <Stack direction={{xs: "column", md:"row"}}>
          <Box flex={1}>
             <Box sx={{width: '100%', position: 'sticky', top: '86px'}}>
                <ReactPlayer url={`https://www.youtube.com/watch?v=${id}`}
                className= "react-player" controls /> 
 
-               <Typography color="#fff" variant="hs" fontWeight="bold">
+               <Typography color="#fff" variant="hs" fontWeight="bold" p={2}>
                 {title}
                </Typography>
 
@@ -69,7 +69,7 @@ const { snippet : { title, channelId, channelTitle }, statistics: { viewCount, l
        </Stack>
 
     </Box>
-  )
-}
+  );
+};
 
 export default VideoDetail;
