@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/MAS364/YClone.git/static/css/main.7064deb2.css",
+    "main.js": "/MAS364/YClone.git/static/js/main.94b4fdce.js",
+    "index.html": "/MAS364/YClone.git/index.html",
+    "main.7064deb2.css.map": "/MAS364/YClone.git/static/css/main.7064deb2.css.map",
+    "main.94b4fdce.js.map": "/MAS364/YClone.git/static/js/main.94b4fdce.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7064deb2.css",
+    "static/js/main.94b4fdce.js"
+  ]
+}
